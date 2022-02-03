@@ -1,0 +1,39 @@
+
+.nav-item{text-align: right;}
+
+.new{columns: #182145;}
+
+.button { 
+  border-radius: 25px; 
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: #182145; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #182145;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: #182145; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #182145;
+  color: white;
+}

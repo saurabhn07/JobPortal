@@ -1,0 +1,49 @@
+
+  <div class="form-group">
+            <label for="txtemail" class="col-sm-2 col-form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="loginData.username"
+              name="txtemail"
+              #txtemail="ngModel"
+             
+              required
+            />
+          </div>
+
+          
+
+
+  <div class="form-group">
+    <label for="txtpassword" class="col-sm-2 col-form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      [(ngModel)]="loginData.password"
+      name="txtemail"
+      #txtemail="ngModel"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <button
+      
+      (click)="addJobs()"
+      
+      type="button"
+      class="btn btn-primary"
+    >
+     Login
+    </button>
+  </div>   
+
+
+  <a routerLink="/jsoptions/{{ title }}" routerLinkActive="active">
+
+ 
+
+
+

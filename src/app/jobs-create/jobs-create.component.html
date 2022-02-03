@@ -1,0 +1,106 @@
+<p>js-create works!</p>
+<div class="container">
+  <div class="col align-self-center">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div class="form-group">
+        <label for="jobname" class="col-sm-2 col-form-label">Job Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="jobsDetails.jobname"
+          name="txtjobname"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+    
+      <div class="form-group">
+        <label for="txteducationDetails" class="col-sm-2 col-form-label">Education Details</label>
+        <input
+          type="educationDetails"
+          class="form-control"
+          [(ngModel)]="jobsDetails.educationDetails"
+          name="txteducationDetails"
+          #txtemail="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+          required
+        />
+      </div>
+      <div class="container">
+        <div class="col align-self-center">
+          <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <div class="form-group">
+              <label for="jobLocation" class="col-sm-2 col-form-label">Job Location</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="jobsDetails.jobLocation"
+                name="txtjobname"
+                #ename="ngModel"
+                pattern="^[a-zA-Z\s]{1,15}$"
+                required
+              />
+            </div>
+      <div class="error form-control-feedback">
+        <div class="container">
+            <div class="col align-self-center">
+              <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+                <div class="form-group">
+                  <label for="experiance" class="col-sm-2 col-form-label">Experiance</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="jobsDetails.experiance"
+                    name="txtexperiance"
+                    #ename="ngModel"
+                    pattern="^[a-zA-Z\s]{1,15}$"
+                    required
+                  />
+                </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="jobsDetails.phone"
+          name="txtphone"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+      <div class="container">
+        <div class="col align-self-center">
+          <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <div class="form-group">
+              <label for="address" class="col-sm-2 col-form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="jobsDetails.address"
+                name="txtaddress"
+                #ename="ngModel"
+                pattern="^[a-zA-Z\s]{1,15}$"
+                required
+              />
+            </div>
+      <div class="form-group">
+        <button
+          (click)="addJobs()"
+          
+          type="button"
+          class="btn btn-primary"
+        >
+          Add Jobs
+        </button>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="submitted">
+        Please fill all the fields
+      </div>
+    </form>
+  </div>
+
+<pre>
+    {{ jobsDetails | json }}
+</pre>

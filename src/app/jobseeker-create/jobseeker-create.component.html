@@ -1,0 +1,136 @@
+<p>js-create works!</p>
+<div class="container">
+  <div class="col align-self-center">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div class="form-group">
+        <label for="jsname" class="col-sm-2 col-form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="jobseekerDetails.jsname"
+          name="txtjsname"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+    
+      <div class="form-group">
+        <label for="txtemail" class="col-sm-2 col-form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="jobseekerDetails.email"
+          name="txtemail"
+          #txtemail="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+          required
+        />
+      </div>
+      <span
+        *ngIf="txtemail.invalid && txtemail.touched"
+        class="error form-control-feedback"
+        >E-mail is required</span
+      >
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="jobseekerDetails.password"
+          name="inputPassword"
+          #inputPassword="ngModel"
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$"
+          minlength="8"
+        />
+      </div>
+      <div class="error form-control-feedback">
+        <span
+          *ngIf="
+            inputPassword.errors &&
+            (inputPassword.touched || inputPassword.dirty)
+          "
+          >Password is required</span
+        >
+        <span *ngIf="inputPassword.errors"
+          >Password must be 8 characters long</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="jobseekerDetails.phone"
+          name="txtphone"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+
+      <div class="col align-self-center">
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+          <div class="form-group">
+            <label for="educationDetails" class="col-sm-2 col-form-label">Education Details</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="jobseekerDetails.educationDetails"
+              name="txteducationDetails"
+              #ename="ngModel"
+              pattern="^[a-zA-Z\s]{1,15}$"
+              required
+            />
+          </div>
+          <div class="col align-self-center">
+            <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+              <div class="form-group">
+                <label for="location" class="col-sm-2 col-form-label">Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="jobseekerDetails.location"
+                  name="txtlocation"
+                  #ename="ngModel"
+                  pattern="^[a-zA-Z\s]{1,15}$"
+                  required
+                />
+              </div>
+              <div class="col align-self-center">
+                <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+                  <div class="form-group">
+                    <label for="experiance" class="col-sm-2 col-form-label">Experiance</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="jobseekerDetails.experiance"
+                      name="txtexperiance"
+                      #ename="ngModel"
+                      pattern="^[a-zA-Z\s]{1,15}$"
+                      required
+                    />
+                  </div>
+      <div class="form-group">
+        <button
+          (click)="addJobseeker()"
+          
+          type="button"
+          class="btn btn-primary"
+        >
+          Add Jobseeker
+        </button>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="submitted">
+        Please fill all the fields
+      </div>
+    </form>
+  </div>
+
+<pre>
+    {{ jobseekerDetails | json }}
+</pre>

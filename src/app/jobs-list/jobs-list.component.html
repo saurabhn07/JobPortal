@@ -1,0 +1,31 @@
+<p>ejobs-list works!</p>
+<table class="table table-hover table-info">
+  <thead>
+    <tr>
+      <th scope="col">Jobid</th>
+      <th scope="col">Jobname</th>
+      <th scope="col">Education Details</th>
+      <th scope="col">Job Location</th>
+      <th scope="col">Experiance</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jb of jobss">
+        
+        <td>{{ jb.jobid }}</td>
+        <td>{{ jb.jobname }}</td>
+        <td>{{ jb.educationDetails }}</td>
+        <td>{{ jb.jobLocation }}</td>
+        <td>{{ jb.experiance }}</td>
+        <td>{{ jb.phone }}</td>
+        <td>{{ jb.address }}</td>
+        <td>{{ jb.address }}</td>
+        <td><button class="button button1" routerLink="loginn" routerLinkActive="active"
+           (click)="applyJob()">Apply Now</button></td>
+  
+    </tr>
+  </tbody>
+</table>

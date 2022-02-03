@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+
+
+.container {
+    background-color: #f2f2f2;
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: blue;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center; " >
+    <img src="../../assets/ac.jpg" width="600px" height="190px">
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Saurabh Nare</h2>
+        <p class="title">Project Deveploer</p>
+        <p>Our Project Devolper</p>
+        <p>saurabh@gmail.com</p>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Pavani Pulluri</h2>
+        
+        <p class="title">Project Deveploer</p>
+        <p>Our Project Devolper</p>
+        <p>pavani@gmail.com</p>
+       
+      </div>
+    </div>
+  </div>
+  
+ 
+
+
+ <div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Prajwal</h2>
+        <p class="title">Designer</p>
+        <p>Our website Designer</p>
+        <p>prajwal@gmail.com</p>
+       
+      </div>
+    </div>
+  </div>
+
+ <div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Pradip X</h2>
+        <p class="title">Designer</p>
+        <p>Our Designer</p>
+        <p>pradip@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Santhosh Krishna</h2>
+        
+        <p class="title">Project Deveploer</p>
+        <p>Our Project Devolper</p>
+        <p>santhosh@gmail.com</p>
+       
+      </div>
+    </div>
+  </div>
+ <div class="column">
+    <div class="card">
+      
+      <div class="container-fluid">
+        <h2>Prajaktha</h2>
+        <p class="title">Designer</p>
+        <p>Our Designer</p>
+        <p>prajaktha@gmail.com</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

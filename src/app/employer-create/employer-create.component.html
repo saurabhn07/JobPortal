@@ -1,0 +1,106 @@
+<p>employer-create works!</p>
+<div class="container">
+  <div class="col align-self-center">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div class="form-group">
+        <label for="ename" class="col-sm-2 col-form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="employerDetails.ename"
+          name="txtename"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+      <span
+        *ngIf="ename.invalid && ename.touched"
+        class="error form-control-feedback"
+        >Enter your Name</span
+      >
+      <pre class="info">
+          Valid? {{ ename.valid }} 
+          Touched? {{ ename.touched }}
+          UnTouched? {{ ename.untouched }}
+          Dirty? {{ ename.dirty }}
+          Pristine? {{ ename.pristine }}
+        </pre
+      >
+      <div class="form-group">
+        <label for="txtemail" class="col-sm-2 col-form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="employerDetails.email"
+          name="txtemail"
+          #txtemail="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+          required
+        />
+      </div>
+      <span
+        *ngIf="txtemail.invalid && txtemail.touched"
+        class="error form-control-feedback"
+        >E-mail is required</span
+      >
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="employerDetails.password"
+          name="inputPassword"
+          #inputPassword="ngModel"
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$"
+          minlength="8"
+        />
+      </div>
+      <div class="error form-control-feedback">
+        <span
+          *ngIf="
+            inputPassword.errors &&
+            (inputPassword.touched || inputPassword.dirty)
+          "
+          >Password is required</span
+        >
+        <span *ngIf="inputPassword.errors"
+          >Password must be 8 characters long</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="employerDetails.phone"
+          name="txtphone"
+          #ename="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <button
+          (click)="addEmployer()"
+          
+          type="button"
+          class="btn btn-primary"
+        >
+          Add Employer
+        </button>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="submitted">
+        Please fill all the fields
+      </div>
+    </form>
+  </div>
+</div>
+<pre>
+    {{ employerDetails | json }}
+</pre>
